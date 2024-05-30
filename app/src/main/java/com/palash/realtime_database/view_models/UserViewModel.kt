@@ -11,7 +11,6 @@ import javax.inject.Inject
 class UserViewModel @Inject constructor(private val userRepository: UserRepository) : ViewModel() {
 
     val users: LiveData<List<User>> = userRepository.getUsers()
-    //val success : LiveData<String> = userRepository.success
 
     fun addUser(user: User) {
         userRepository.addUser(user)

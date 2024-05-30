@@ -16,9 +16,6 @@ class UserRepository @Inject constructor(private val context: Context) {
 
     private val database = Firebase.database.reference
 
-    /*private var _success = MutableLiveData<String>()
-    val success: LiveData<String> = _success*/
-
     // Write a new user
     fun addUser(user: User) {
         val userId = database.child("users").push().key // Create a unique ID for the user
